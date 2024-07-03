@@ -1,5 +1,7 @@
+import { MainPage } from "./pages/MainPage/MainPage.tsx";
+
 function App() {
-  return <div className="App">hiiii</div>;
+  return <MainPage />;
 }
 
 export default App;

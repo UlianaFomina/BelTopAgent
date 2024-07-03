@@ -1,0 +1,7 @@
+.header-container {
+  display: flex;
+  gap: 70px;
+  align-items: center;
+  margin-top: 40px;
+  margin-left: 140px;
+}
