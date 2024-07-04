@@ -1,4 +1,35 @@
 .main {
   display: flex;
   justify-content: space-between;
+  height: 100vh;
+  background-color: var(--lite-violet);
+}
+.main-info{
+  width: 55%;
+}
+.main-info-title{
+  height: 70%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.main-info-title-text {
+  color: var(--dark-violet);
+  font-size: 120px;
+}
+.main-info-desk{
+  height: 30%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-color: var(--bg-dark);
+}
+.main-info-desk-text {
+  color: var(--lite-violet);
+  text-align: center;
+  width: 80%;
+  font-size: 32;
+}
+.main-img{
+  width: 45%;
 }

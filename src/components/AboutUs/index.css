@@ -1,0 +1,22 @@
+.about{
+    height: 100vh;
+    background-color: var(--bg-dark);
+}
+.about-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 160px;
+    height: 35%;
+}
+.about-info-text{
+    font-size: var(--font-sise-md);
+    color: var(--lite-violet);
+}
+.about-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    background-color: var(--lite-violet);
+}
