@@ -1,0 +1,43 @@
+.offers{
+    height: 100%;
+    width: 100%;
+    background-color: var(--bg-dark);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.offers-title{
+    color: var(--dark-violet);
+    font-size: 96px;
+    margin-bottom: 100px;
+}
+.offers-setcion-container{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+.offers-section{
+    display: flex;
+    gap: 55px;
+}
+.offers-section-info{
+    background-color: var(--dark-violet);
+    width: 325px;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.offers-section-info-text{
+    font-size: var(--font-sise-sm);
+    color: var(--lite-violet);
+    text-align: center;
+}
+.offers-section-num{
+    color: var(--dark-violet);
+    font-size: 200px;
+    opacity: 0.2;
+}

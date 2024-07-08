@@ -5,7 +5,7 @@
   background-color: var(--lite-violet);
 }
 .main-info{
-  width: 55%;
+  width: 58%;
 }
 .main-info-title{
   height: 70%;
@@ -28,8 +28,8 @@
   color: var(--lite-violet);
   text-align: center;
   width: 80%;
-  font-size: 32;
+  font-size: var(--font-sise-sm);
 }
 .main-img{
-  width: 45%;
+  width: 42%;
 }

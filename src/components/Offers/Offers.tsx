@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import React from "react";
 import "./index.css";
 
 import { texts } from "../../theme/infoObjects/all.ts";

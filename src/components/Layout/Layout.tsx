@@ -8,7 +8,7 @@ interface ILayoutProps {
 
 export const Layout = ({ children }: ILayoutProps) => {
   return (
-    <div>
+    <div className="layout">
       <Header />
       {children}
     </div>
