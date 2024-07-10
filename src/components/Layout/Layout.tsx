@@ -4,12 +4,13 @@ import { Header } from "../Header/Header.tsx";
 
 interface ILayoutProps {
   children?: ReactElement;
+  location?: "main" | "about" | "benefits" | "offers" | "contacts";
 }
 
-export const Layout = ({ children }: ILayoutProps) => {
+export const Layout = ({ children, location }: ILayoutProps) => {
   return (
     <div className="layout">
-      <Header />
+      <Header location={location} />
       {children}
     </div>
   );

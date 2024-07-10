@@ -4,6 +4,6 @@
   align-items: center;
   margin-top: 40px;
   margin-left: 140px;
-  position: fixed;
-  top: 0;
+  /* position: relative; */
+  top: 0
 }
