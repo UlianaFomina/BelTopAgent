@@ -3,12 +3,24 @@ import "./index.css";
 
 import { texts } from "../../theme/infoObjects/all.ts";
 import { Header } from "../Header/Header.tsx";
+import { Phone } from "../../theme/icons/Phone.tsx";
+import { Mail } from "../../theme/icons/Mail.tsx";
+import { WebIcon } from "../../theme/icons/WebIcon.tsx";
 
 export const Contacts = () => {
   return (
     <div className="contacts">
       <div className="contacts-content">
-        <Header location="contacts" />
+        <Header
+          location="contacts"
+          styles={{
+            flexDirection: "column",
+            gap: 15,
+            marginTop: 0,
+            marginLeft: 0,
+            position: "initial",
+          }}
+        />
         <div className="contacts-line" />
         <div className="contacts-section">
           <p className="contacts-text">{texts.contacts.adress1}</p>
@@ -16,9 +28,24 @@ export const Contacts = () => {
         </div>
         <div className="contacts-line" />
         <div className="contacts-section" style={{ gap: 20 }}>
-          <a href="tel:+375296182295">{texts.contacts.phone}</a>
-          <a href="mailto:beltopagent@gmail.com">{texts.contacts.mail}</a>
-          <a href="http/beltopagent.by">{texts.contacts.webSite}</a>
+          <div className="contact-section-content">
+            <Phone />
+            <a className="contact-link" href="tel:+375296182295">
+              {texts.contacts.phone}
+            </a>
+          </div>
+          <div className="contact-section-content">
+            <Mail />
+            <a className="contact-link" href="mailto:beltopagent@gmail.com">
+              {texts.contacts.mail}
+            </a>
+          </div>
+          <div className="contact-section-content">
+            <WebIcon />
+            <a className="contact-link" href="http/beltopagent.by">
+              {texts.contacts.webSite}
+            </a>
+          </div>
         </div>
       </div>
     </div>

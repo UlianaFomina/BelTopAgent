@@ -5,17 +5,12 @@ import { titles } from "../../theme/infoObjects/all.ts";
 
 interface IHeaderProps {
   location?: "main" | "about" | "benefits" | "offers" | "contacts";
+  styles?: React.CSSProperties;
 }
 
-export const Header = ({ location }: IHeaderProps) => {
+export const Header = ({ location, styles }: IHeaderProps) => {
   return (
-    <div
-      className="header-container"
-      style={{
-        flexDirection: location === "contacts" ? "column" : "row",
-        gap: location === "contacts" ? 15 : 70,
-      }}
-    >
+    <div className="header-container" style={styles}>
       <LogoMini />
       <a href="/#">{titles.aboutUs}</a>
       <a href="/#">{titles.offers}</a>

@@ -1,32 +1,32 @@
-.about{
-    height: 100%;
-    background-color: var(--bg-dark);
+.about {
+  height: 100vh;
+  background-color: var(--bg-dark);
 }
-.about-info{
-    height: 35vh;
+.about-info {
+  height: 35vh;
 }
-.about-info-content{
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding:0 160px;
-    gap: 8%
+.about-info-content {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 160px;
+  gap: 8%;
 }
-.about-info-text{
-    font-size: var(--font-sise-sm);
-    color: var(--lite-violet);
+.about-info-text {
+  font-size: var(--font-sise-sm);
+  color: var(--lite-violet);
 }
-.about-logo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 30vh;
-    background-color: var(--lite-violet);
+.about-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  background-color: var(--lite-violet);
 }
-.speedometr-icon{
-    min-width: 215px;
+.speedometr-icon {
+  min-width: 215px;
 }
-.licence-icon{
-    min-width: 215px;
+.licence-icon {
+  min-width: 215px;
 }
