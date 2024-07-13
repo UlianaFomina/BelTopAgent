@@ -25,7 +25,7 @@
 .offers-section-info {
   background-color: var(--dark-violet);
   width: 325px;
-  padding: 20px 30px;
+  padding: 1% 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,4 +40,74 @@
   color: var(--dark-violet);
   font-size: 200px;
   opacity: 0.2;
+}
+
+@media screen and (max-width: 1650px) {
+  .offers-section-info {
+    width: 230px;
+    padding: 1% 30px;
+  }
+  .offers-section-num {
+    font-size: 150px;
+  }
+  .offers-title {
+    font-size: 75px;
+    margin-bottom: 100px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .offers-section-info {
+    width: 200px;
+    padding: 10px 20px;
+  }
+  .offers-section-num {
+    font-size: 140px;
+  }
+  .offers-title {
+    font-size: 65px;
+    margin-bottom: 80px;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .offers-section-info {
+    width: 170px;
+    padding: 0 15px;
+  }
+  .offers-section-num {
+    font-size: 120px;
+  }
+  .offers-title {
+    font-size: 55px;
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .offers-section-info {
+    width: 150px;
+    padding: 0 15px;
+  }
+  .offers-section-num {
+    font-size: 95px;
+  }
+  .offers-title {
+    font-size: 45px;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 870px) {
+  .offers-section {
+    gap: 30px;
+  }
+  .offers-section-info {
+    width: 140px;
+    padding: 0 15px;
+  }
+  .offers-section-num {
+    font-size: 80px;
+  }
+  .offers-title {
+    font-size: 45px;
+    margin-bottom: 40px;
+  }
 }

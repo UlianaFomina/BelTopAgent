@@ -27,21 +27,21 @@ export const Contacts = () => {
           <p className="contacts-text">{texts.contacts.adress2}</p>
         </div>
         <div className="contacts-line" />
-        <div className="contacts-section" style={{ gap: 20 }}>
+        <div className="contacts-section">
           <div className="contact-section-content">
-            <Phone />
+            <Phone className="contact-link-icon" />
             <a className="contact-link" href="tel:+375296182295">
               {texts.contacts.phone}
             </a>
           </div>
           <div className="contact-section-content">
-            <Mail />
+            <Mail className="contact-link-icon" />
             <a className="contact-link" href="mailto:beltopagent@gmail.com">
               {texts.contacts.mail}
             </a>
           </div>
           <div className="contact-section-content">
-            <WebIcon />
+            <WebIcon className="contact-link-icon" />
             <a className="contact-link" href="http/beltopagent.by">
               {texts.contacts.webSite}
             </a>

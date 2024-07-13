@@ -11,11 +11,19 @@ interface IHeaderProps {
 export const Header = ({ location, styles }: IHeaderProps) => {
   return (
     <div className="header-container" style={styles}>
-      <LogoMini />
-      <a href="/#">{titles.aboutUs}</a>
-      <a href="/#">{titles.offers}</a>
-      <a href="/#">{titles.benefits}</a>
-      <a href="/#">{titles.contacts}</a>
+      <LogoMini className="header-logo" />
+      <a href="/#" className="header-link">
+        {titles.aboutUs}
+      </a>
+      <a href="/#" className="header-link">
+        {titles.offers}
+      </a>
+      <a href="/#" className="header-link">
+        {titles.benefits}
+      </a>
+      <a href="/#" className="header-link">
+        {titles.contacts}
+      </a>
     </div>
   );
 };

@@ -18,7 +18,7 @@ export const AboutUs = () => {
         </div>
       </div>
       <div className="about-logo">
-        <img src={Logo} />
+        <img src={Logo} alt="logo" className="about-logo-img" />
       </div>
       <div className="about-info">
         <div className="about-info-content">

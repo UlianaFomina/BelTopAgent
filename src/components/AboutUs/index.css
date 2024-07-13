@@ -30,3 +30,54 @@
 .licence-icon {
   min-width: 215px;
 }
+
+@media screen and (max-width: 1650px) {
+  .speedometr-icon {
+    min-width: 180px;
+  }
+  .licence-icon {
+    min-width: 180px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .about-info-content {
+    padding: 0 120px;
+    gap: 8%;
+  }
+  .speedometr-icon {
+    min-width: 150px;
+  }
+  .licence-icon {
+    min-width: 150px;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .about-info-content {
+    padding: 0 80px;
+    gap: 8%;
+  }
+  .speedometr-icon {
+    min-width: 120px;
+  }
+  .licence-icon {
+    min-width: 120px;
+  }
+  .about-logo-img {
+    width: 150px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .about-info-content {
+    padding: 0 60px;
+    gap: 4%;
+  }
+  .speedometr-icon {
+    min-width: 100px;
+  }
+  .licence-icon {
+    min-width: 100px;
+  }
+  .about-logo-img {
+    width: 120px;
+  }
+}

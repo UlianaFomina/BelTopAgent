@@ -2,6 +2,7 @@
 
 body {
   margin: 0;
+  overflow-x: hidden;
 }
 * {
   scrollbar-width: thin;
@@ -50,11 +51,35 @@ body {
   --dark-violet: #7b72da;
   --bg-dark: #292866;
   --font-main: "Sansation", sans-serif;
-  --font-sise-xsm: 20px;
+  --font-sise-xsm: 28px;
   --font-sise-sm: 30px;
   --font-sise-md: 36px;
 }
 
+@media screen and (max-width: 1650px) {
+  :root {
+    --font-sise-xsm: 23px;
+    --font-sise-sm: 25px;
+  }
+}
+@media screen and (max-width: 1650px) {
+  :root {
+    --font-sise-xsm: 20px;
+    --font-sise-sm: 22px;
+  }
+}
+@media screen and (max-width: 1150px) {
+  :root {
+    --font-sise-xsm: 16px;
+    --font-sise-sm: 18px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  :root {
+    --font-sise-xsm: 14px;
+    --font-sise-sm: 15px;
+  }
+}
 a {
   width: max-content;
   text-decoration: none;

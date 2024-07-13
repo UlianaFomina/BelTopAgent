@@ -34,10 +34,14 @@ const Section = ({ content }: ISectionProps) => {
     <div className="offers-section">
       {content.map((item) => {
         if (item.length === 1) {
-          return <p className="offers-section-num">{item}</p>;
+          return (
+            <p className="offers-section-num" key={item}>
+              {item}
+            </p>
+          );
         } else {
           return (
-            <div className="offers-section-info">
+            <div className="offers-section-info" key={item}>
               <p className="offers-section-info-text">{item}</p>
             </div>
           );

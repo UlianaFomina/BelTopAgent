@@ -10,13 +10,13 @@ import { Header } from "../../components/Header/Header.tsx";
 
 export const MainPage = () => {
   return (
-    <>
+    <div className="main-page">
       <Header />
       <Main />
       <AboutUs />
       <Offers />
       <Benefits />
       <Contacts />
-    </>
+    </div>
   );
 };

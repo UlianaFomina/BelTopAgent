@@ -4,10 +4,10 @@
   height: 100vh;
   background-color: var(--lite-violet);
 }
-.main-info{
+.main-info {
   width: 58%;
 }
-.main-info-title{
+.main-info-title {
   height: 70%;
   align-items: center;
   display: flex;
@@ -17,7 +17,7 @@
   color: var(--dark-violet);
   font-size: 120px;
 }
-.main-info-desk{
+.main-info-desk {
   height: 30%;
   align-items: center;
   display: flex;
@@ -30,6 +30,22 @@
   width: 80%;
   font-size: var(--font-sise-sm);
 }
-.main-img{
+.main-img {
   width: 42%;
+}
+
+@media screen and (max-width: 1650px) {
+  .main-info-title-text {
+    font-size: 100px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .main-info-title-text {
+    font-size: 80px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .main-info-title-text {
+    font-size: 58px;
+  }
 }
