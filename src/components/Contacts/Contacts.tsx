@@ -1,5 +1,6 @@
 import React from "react";
 import "./index.css";
+import { Pages } from "../../models.ts";
 
 import { texts } from "../../theme/infoObjects/all.ts";
 import { Header } from "../Header/Header.tsx";
@@ -9,10 +10,10 @@ import { WebIcon } from "../../theme/icons/WebIcon.tsx";
 
 export const Contacts = () => {
   return (
-    <div className="contacts">
+    <div className="contacts" id={Pages.CONTACTS}>
       <div className="contacts-content">
         <Header
-          location="contacts"
+          location={Pages.CONTACTS}
           styles={{
             flexDirection: "column",
             gap: 15,

@@ -1,29 +1,57 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import "./index.css";
 import { LogoMini } from "../../theme/icons/LogoMini.tsx";
 import { titles } from "../../theme/infoObjects/all.ts";
+import { Pages } from "../../models.ts";
 
 interface IHeaderProps {
-  location?: "main" | "about" | "benefits" | "offers" | "contacts";
+  location: Pages;
+  setLocation?: (val: Pages) => void;
   styles?: React.CSSProperties;
 }
 
-export const Header = ({ location, styles }: IHeaderProps) => {
+type IHeaderItem = {
+  content: ReactElement | string;
+  id: Pages;
+};
+
+const headerList: IHeaderItem[] = [
+  {
+    content: <LogoMini className="header-logo" />,
+    id: Pages.MAIN,
+  },
+  {
+    content: titles.aboutUs,
+    id: Pages.ABOUT,
+  },
+  {
+    content: titles.offers,
+    id: Pages.OFFERS,
+  },
+  {
+    content: titles.benefits,
+    id: Pages.BENEFITS,
+  },
+  {
+    content: titles.contacts,
+    id: Pages.CONTACTS,
+  },
+];
+
+export const Header = ({ location, setLocation, styles }: IHeaderProps) => {
   return (
     <div className="header-container" style={styles}>
-      <LogoMini className="header-logo" />
-      <a href="/#" className="header-link">
-        {titles.aboutUs}
-      </a>
-      <a href="/#" className="header-link">
-        {titles.offers}
-      </a>
-      <a href="/#" className="header-link">
-        {titles.benefits}
-      </a>
-      <a href="/#" className="header-link">
-        {titles.contacts}
-      </a>
+      {headerList.map((item) => {
+        return (
+          <button onClick={() => ScrollById(item.id)}>{item.content}</button>
+        );
+      })}
     </div>
   );
+};
+
+const ScrollById = (id: Pages) => {
+  document.getElementById(id)?.scrollIntoView({
+    behavior: "smooth",
+  });
 };

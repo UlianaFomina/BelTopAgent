@@ -2,10 +2,11 @@ import React from "react";
 import "./index.css";
 
 import { texts } from "../../theme/infoObjects/all.ts";
+import { Pages } from "../../models.ts";
 
 export const Offers = () => {
   return (
-    <div className="offers">
+    <div className="offers" id={Pages.OFFERS}>
       <h2 className="offers-title">{texts.offers.title}</h2>
       <div className="offers-setcion-container">
         <Section

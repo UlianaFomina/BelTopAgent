@@ -114,6 +114,12 @@ button {
   outline: none;
   border-radius: 5px;
   transition: 1s;
+  background-color: transparent;
+  color: var(--dark-violet);
+  cursor: pointer;
+  font-family: var(--font-main);
+  font-weight: 600;
+  font-style: inherit;
 }
 .layout {
   height: 100vh;

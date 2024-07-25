@@ -4,11 +4,12 @@ import "./index.css";
 import { texts } from "../../theme/infoObjects/all.ts";
 import { Speedometr } from "../../theme/icons/Speedometer.tsx";
 import { Licence } from "../../theme/icons/Licence.tsx";
+import { Pages } from "../../models.ts";
 import Logo from "../../theme/images/Logo.png";
 
 export const AboutUs = () => {
   return (
-    <div className="about">
+    <div className="about" id={Pages.ABOUT}>
       <div className="about-info">
         <div className="about-info-content">
           <Speedometr className="speedometr-icon" />
