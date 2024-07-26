@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./index.css";
 
 import { texts } from "../../theme/infoObjects/all.ts";
@@ -6,8 +6,22 @@ import { Speedometr } from "../../theme/icons/Speedometer.tsx";
 import { Licence } from "../../theme/icons/Licence.tsx";
 import { Pages } from "../../models.ts";
 import Logo from "../../theme/images/Logo.png";
+import { useInView } from "react-intersection-observer";
 
-export const AboutUs = () => {
+interface IAboutUsProps {
+  setLocation: (val: Pages) => void;
+}
+
+export const AboutUs = ({ setLocation }: IAboutUsProps) => {
+  const { ref, inView } = useInView({
+    threshold: 0,
+  });
+
+  useEffect(() => {
+    if (inView) setLocation(Pages.ABOUT);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [inView]);
+
   return (
     <div className="about" id={Pages.ABOUT}>
       <div className="about-info">
@@ -18,7 +32,7 @@ export const AboutUs = () => {
           </p>
         </div>
       </div>
-      <div className="about-logo">
+      <div className="about-logo" ref={ref}>
         <img src={Logo} alt="logo" className="about-logo-img" />
       </div>
       <div className="about-info">

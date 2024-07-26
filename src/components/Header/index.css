@@ -7,6 +7,32 @@
   position: fixed;
   top: 0;
 }
+
+.header-link-dark {
+  color: var(--lite-violet);
+}
+.header-link-light {
+  color: #000;
+}
+.header-link-dark svg path {
+  stroke: var(--lite-violet);
+}
+.header-link-light svg path {
+  stroke: #000;
+}
+.header-link-dark-active,
+.header-link-light-active {
+  color: var(--dark-violet);
+}
+.header-link-dark-active svg path,
+.header-link-light-active svg path {
+  stroke: var(--dark-violet);
+}
+.header-link-undefined,
+.header-link-undefined-active {
+  opacity: 0;
+}
+
 @media screen and (max-width: 1650px) {
   .header-container {
     gap: 60px;

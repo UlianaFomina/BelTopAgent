@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./index.css";
 import { Pages } from "../../models.ts";
 
@@ -7,13 +7,41 @@ import { Header } from "../Header/Header.tsx";
 import { Phone } from "../../theme/icons/Phone.tsx";
 import { Mail } from "../../theme/icons/Mail.tsx";
 import { WebIcon } from "../../theme/icons/WebIcon.tsx";
+import { useInView } from "react-intersection-observer";
 
-export const Contacts = () => {
+interface IConactsProps {
+  setHeaderMode: (val?: "dark" | "light") => void;
+  location: Pages;
+  setLocation: (val: Pages) => void;
+}
+
+export const Contacts = ({
+  setHeaderMode,
+  location,
+  setLocation,
+}: IConactsProps) => {
+  const { ref, inView } = useInView({
+    threshold: 1,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      setHeaderMode(undefined);
+      setLocation(Pages.CONTACTS);
+    } else {
+      setHeaderMode("dark");
+      setLocation(Pages.BENEFITS);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [inView]);
+
   return (
-    <div className="contacts" id={Pages.CONTACTS}>
+    <div className="contacts" id={Pages.CONTACTS} ref={ref}>
       <div className="contacts-content">
         <Header
-          location={Pages.CONTACTS}
+          location={location}
+          setLocation={setLocation}
+          mode="light"
           styles={{
             flexDirection: "column",
             gap: 15,

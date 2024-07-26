@@ -1,13 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./index.css";
 
 import { texts } from "../../theme/infoObjects/all.ts";
 import { Pages } from "../../models.ts";
+import { useInView } from "react-intersection-observer";
 
-export const Offers = () => {
+interface IOffersProps {
+  setLocation: (val: Pages) => void;
+}
+
+export const Offers = ({ setLocation }: IOffersProps) => {
+  const { ref, inView } = useInView({
+    threshold: 1,
+  });
+
+  useEffect(() => {
+    if (inView) setLocation(Pages.OFFERS);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [inView]);
+
   return (
     <div className="offers" id={Pages.OFFERS}>
-      <h2 className="offers-title">{texts.offers.title}</h2>
+      <h2 className="offers-title" ref={ref}>
+        {texts.offers.title}
+      </h2>
       <div className="offers-setcion-container">
         <Section
           content={[

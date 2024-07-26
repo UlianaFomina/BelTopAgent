@@ -5,8 +5,9 @@ import { titles } from "../../theme/infoObjects/all.ts";
 import { Pages } from "../../models.ts";
 
 interface IHeaderProps {
+  mode?: "dark" | "light";
+  setLocation: (val: Pages) => void;
   location: Pages;
-  setLocation?: (val: Pages) => void;
   styles?: React.CSSProperties;
 }
 
@@ -38,19 +39,38 @@ const headerList: IHeaderItem[] = [
   },
 ];
 
-export const Header = ({ location, setLocation, styles }: IHeaderProps) => {
+export const Header = ({
+  setLocation,
+  styles,
+  mode,
+  location,
+}: IHeaderProps) => {
   return (
     <div className="header-container" style={styles}>
       {headerList.map((item) => {
+        const activeClass =
+          item.id === location
+            ? `header-link-${mode}-active`
+            : `header-link-${mode}`;
         return (
-          <button onClick={() => ScrollById(item.id)}>{item.content}</button>
+          <button
+            onClick={() => {
+              ScrollById(item.id);
+              setLocation(item.id);
+            }}
+            key={item.id}
+            style={{}}
+            className={`${activeClass} header-link`}
+          >
+            {item.content}
+          </button>
         );
       })}
     </div>
   );
 };
 
-const ScrollById = (id: Pages) => {
+export const ScrollById = (id: Pages) => {
   document.getElementById(id)?.scrollIntoView({
     behavior: "smooth",
   });
