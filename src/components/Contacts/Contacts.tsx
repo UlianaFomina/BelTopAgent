@@ -88,7 +88,11 @@ export const Contacts = ({
           </div>
           <div className="contact-section-content">
             <WebIcon className="contact-link-icon" />
-            <a className="contact-link" href="http/beltopagent.by">
+            <a
+              className="contact-link"
+              href="http/beltopagent.by"
+              target="_blank"
+            >
               {texts.contacts.webSite}
             </a>
           </div>
