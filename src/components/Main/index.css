@@ -5,7 +5,7 @@
   background-color: var(--lite-violet);
 }
 .main-info {
-  width: 58%;
+  width: 100%;
 }
 .main-info-title {
   height: 70%;
@@ -47,5 +47,10 @@
 @media screen and (max-width: 1000px) {
   .main-info-title-text {
     font-size: 58px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .main-info-title-text {
+    font-size: 50px;
   }
 }

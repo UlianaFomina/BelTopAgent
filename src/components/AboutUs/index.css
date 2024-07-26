@@ -82,3 +82,21 @@
     width: 120px;
   }
 }
+@media screen and (max-width: 500px) {
+  .about-info-content {
+    padding: 0 30px;
+    gap: 4%;
+  }
+  .speedometr-icon {
+    min-width: 80px;
+  }
+  .licence-icon {
+    min-width: 80px;
+  }
+  .about-logo-img {
+    width: 100px;
+  }
+  .about-info-text {
+    font-size: var(--font-sise-xsm);
+  }
+}

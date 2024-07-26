@@ -19,6 +19,8 @@ export const Offers = ({ setLocation }: IOffersProps) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [inView]);
 
+  const isHorisontalOrientation = window.innerHeight < window.innerWidth;
+
   return (
     <div className="offers" id={Pages.OFFERS}>
       <h2 className="offers-title" ref={ref}>
@@ -33,8 +35,10 @@ export const Offers = ({ setLocation }: IOffersProps) => {
             "4",
             texts.offers.option5,
           ]}
+          isHorisontalOrientation={isHorisontalOrientation}
         />
         <Section
+          isHorisontalOrientation={isHorisontalOrientation}
           content={["1", texts.offers.option2, "3", texts.offers.option4, "5"]}
         />
       </div>
@@ -44,25 +48,40 @@ export const Offers = ({ setLocation }: IOffersProps) => {
 
 type ISectionProps = {
   content: string[];
+  isHorisontalOrientation?: boolean;
 };
 
-const Section = ({ content }: ISectionProps) => {
+const Section = ({ content, isHorisontalOrientation }: ISectionProps) => {
   return (
-    <div className="offers-section">
+    <div
+      className="offers-section"
+      style={{
+        flexDirection: isHorisontalOrientation ? "row" : "column",
+        width: isHorisontalOrientation ? "" : "100%",
+        alignSelf: "center",
+      }}
+    >
       {content.map((item) => {
-        if (item.length === 1) {
+        if (item.length === 1 && isHorisontalOrientation) {
           return (
             <p className="offers-section-num" key={item}>
               {item}
             </p>
           );
-        } else {
+        } else if (item.length !== 1) {
           return (
-            <div className="offers-section-info" key={item}>
+            <div
+              className="offers-section-info"
+              key={item}
+              style={{
+                width: isHorisontalOrientation ? "" : "70%",
+                padding: isHorisontalOrientation ? "" : "5%",
+              }}
+            >
               <p className="offers-section-info-text">{item}</p>
             </div>
           );
-        }
+        } else return <></>;
       })}
     </div>
   );

@@ -35,9 +35,14 @@ export const Contacts = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [inView]);
 
+  const isHorisontalOrientation = window.innerHeight < window.innerWidth;
+
   return (
     <div className="contacts" id={Pages.CONTACTS} ref={ref}>
-      <div className="contacts-content">
+      <div
+        className="contacts-content"
+        style={{ flexDirection: isHorisontalOrientation ? "row" : "column" }}
+      >
         <Header
           location={location}
           setLocation={setLocation}
@@ -50,12 +55,24 @@ export const Contacts = ({
             position: "initial",
           }}
         />
-        <div className="contacts-line" />
+        <div
+          className="contacts-line"
+          style={{
+            minWidth: isHorisontalOrientation ? 1 : "100%",
+            minHeight: isHorisontalOrientation ? "100%" : 1,
+          }}
+        />
         <div className="contacts-section">
           <p className="contacts-text">{texts.contacts.adress1}</p>
           <p className="contacts-text">{texts.contacts.adress2}</p>
         </div>
-        <div className="contacts-line" />
+        <div
+          className="contacts-line"
+          style={{
+            minWidth: isHorisontalOrientation ? 1 : "100%",
+            minHeight: isHorisontalOrientation ? "100%" : 1,
+          }}
+        />
         <div className="contacts-section">
           <div className="contact-section-content">
             <Phone className="contact-link-icon" />

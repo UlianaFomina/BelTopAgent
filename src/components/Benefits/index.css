@@ -83,6 +83,42 @@
     gap: 10px;
   }
   .benefits-option-list {
-    gap: 10 px;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .benefits-title {
+    width: 100%;
+    text-align: center;
+  }
+  .option-container {
+    width: 80%;
+    gap: 20px;
+  }
+  .option-text {
+    font-size: var(--font-sise-sm);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .benefits-title {
+    font-size: 35px;
+  }
+  .option-container {
+    width: 80%;
+    gap: 15px;
+  }
+  .option-text {
+    font-size: var(--font-sise-xsm);
+  }
+}
+@media screen and (max-width: 440px) {
+  .benefits-title {
+    font-size: 30px;
+  }
+  .option-container {
+    width: 85%;
+    gap: 10px;
   }
 }

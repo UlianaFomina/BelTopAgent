@@ -26,6 +26,8 @@ export const Main = ({ setHeaderMode, setLocation }: IMainProps) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [inView]);
 
+  const isHorisontalOrientation = window.innerHeight < window.innerWidth;
+
   return (
     <div className="main" id={Pages.MAIN}>
       <div className="main-info">
@@ -36,7 +38,11 @@ export const Main = ({ setHeaderMode, setLocation }: IMainProps) => {
           <h2 className="main-info-desk-text">{texts.main.desc}</h2>
         </div>
       </div>
-      <img src={MainImg} alt="main-image" className="main-img" />
+      {isHorisontalOrientation ? (
+        <img src={MainImg} alt="main-image" className="main-img" />
+      ) : (
+        <></>
+      )}
     </div>
   );
 };

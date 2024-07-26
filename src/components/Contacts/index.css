@@ -10,9 +10,7 @@
   gap: 150px;
 }
 .contacts-line {
-  min-width: 2px;
   background-color: #fff;
-  min-height: 100%;
 }
 .contacts-section {
   display: flex;
@@ -87,5 +85,25 @@
   }
   .contacts-text {
     font-size: 14px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .contacts-content {
+    gap: 40px;
+  }
+  .contacts {
+    padding: 10px 0;
+  }
+  .contact-link-icon {
+    width: 20px;
+  }
+  .contacts-section {
+    gap: 0;
+  }
+  .contact-link {
+    font-size: 10px;
+  }
+  .contacts-text {
+    font-size: 10px;
   }
 }
