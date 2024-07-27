@@ -33,6 +33,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 10px;
+  height: 100%;
 }
 .offers-section-info-text {
   font-size: var(--font-sise-sm);
@@ -134,6 +135,6 @@
     margin-bottom: 30px;
   }
   .offers-setcion-container {
-    gap: 25px;
+    gap: 20px;
   }
 }
